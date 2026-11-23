@@ -4,15 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>nikhil b nair</title>
-  <link rel="icon" type="image/png" href="./ADD%20A%20HEADINGN.png" />
+  <link rel="icon" type="image/png" href="./ADD%20A%20HEADINGN.png?v=3" />
   <style>
     :root {
       --bg: #09090b;
-      --card: #121216;
+      --surface: #121216;
+      --surface-2: #18181f;
       --gold: #f5c542;
-      --gold-soft: rgba(245, 197, 66, 0.22);
+      --gold-soft: rgba(245, 197, 66, 0.14);
       --text: #f4f4f5;
-      --muted: #a1a1aa;
+      --muted: #b4b4bc;
       --border: #27272a;
     }
 
@@ -23,147 +24,244 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #18150c 0%, var(--bg) 55%);
+      background: radial-gradient(circle at top, #1d180a 0%, var(--bg) 52%);
       color: var(--text);
       font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 36px 18px;
+      line-height: 1.6;
+      padding: 24px 16px 48px;
     }
 
-    .container {
-      width: 100%;
-      max-width: 720px;
-      background: var(--card);
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    header.topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      background: var(--surface);
       border: 1px solid var(--border);
       border-top: 3px solid var(--gold);
-      border-radius: 16px;
-      padding: 32px 24px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
     }
 
-    .brand-bar {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--border);
+      gap: 12px;
     }
 
-    .brand-logo {
-      width: 52px;
-      height: 52px;
-      border-radius: 10px;
+    .brand img {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
       object-fit: cover;
       border: 1px solid var(--gold);
-      background: #000000;
+      background: #000;
     }
 
-    .brand-name {
-      font-size: 1.25rem;
+    .brand-title {
+      font-size: 1.15rem;
       font-weight: 700;
-      letter-spacing: 0.04em;
       color: var(--gold);
       text-transform: lowercase;
     }
 
-    .hero {
-      text-align: center;
-      padding: 32px 10px 24px;
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    .profile-pic {
-      width: 124px;
-      height: 124px;
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 7px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+    }
+
+    nav a:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 24px;
+      margin-bottom: 24px;
+    }
+
+    .avatar {
+      width: 112px;
+      height: 112px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid var(--gold);
-      background: #18181b;
-      margin-bottom: 18px;
+      background: var(--surface-2);
+      flex-shrink: 0;
+    }
+
+    .hero-content {
+      flex: 1;
+      min-width: 240px;
     }
 
     h1 {
       font-size: 2rem;
       color: var(--gold);
       text-transform: lowercase;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
-    .handle {
+    .tag {
       display: inline-block;
-      color: var(--text);
       background: var(--gold-soft);
+      color: var(--gold);
       border: 1px solid var(--gold);
       border-radius: 999px;
-      padding: 6px 14px;
-      font-size: 0.95rem;
-      margin-bottom: 16px;
+      padding: 4px 12px;
+      font-size: 0.88rem;
+      margin-bottom: 12px;
     }
 
-    .bio {
+    .hero p {
       color: var(--muted);
-      line-height: 1.6;
-      max-width: 520px;
-      margin: 0 auto 26px;
-      font-size: 1rem;
-    }
-
-    .actions {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      margin-bottom: 18px;
     }
 
     .btn {
-      text-decoration: none;
+      display: inline-block;
       background: var(--gold);
       color: #09090b;
+      text-decoration: none;
       font-weight: 700;
-      padding: 12px 22px;
-      border-radius: 10px;
-      transition: transform 0.15s ease, opacity 0.15s ease;
+      padding: 10px 18px;
+      border-radius: 9px;
     }
 
-    .btn:hover {
-      transform: translateY(-1px);
-      opacity: 0.92;
+    section.box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.92rem;
     }
 
     footer {
-      margin-top: 24px;
       text-align: center;
       color: var(--muted);
       font-size: 0.85rem;
+      padding-top: 8px;
     }
   </style>
 </head>
 <body>
-  <main class="container">
-    <header class="brand-bar">
-      <img src="./ADD%20A%20HEADINGN.png" alt="nikhil b nair logo" class="brand-logo" />
-      <span class="brand-name">nikhil b nair</span>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <img src="./ADD%20A%20HEADINGN.png?v=3" alt="nikhil b nair logo" />
+        <span class="brand-title">nikhil b nair</span>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#system-requirements">System Requirements</a>
+        <a href="#channel">Channel</a>
+      </nav>
     </header>
 
-    <section class="hero">
-      <img src="./profile.jpg" alt="nikhil b nair profile picture" class="profile-pic" />
-      <h1>nikhil b nair</h1>
-      <div class="handle">@nikhilminecraftmalayalam</div>
-      <p class="bio">
-        Malayalam Minecraft gaming creator. Solo videos, adventure maps, horror mods, and creative storytelling.
-      </p>
-      <div class="actions">
+    <section class="hero" id="about">
+      <img src="./profile.jpg" alt="nikhil b nair profile" class="avatar" />
+      <div class="hero-content">
+        <h1>nikhil b nair</h1>
+        <div class="tag">@nikhilminecraftmalayalam</div>
+        <p>
+          Malayalam gaming creator focused on Minecraft adventures, horror mods, story-driven videos, and creative editing.
+        </p>
         <a class="btn" href="https://www.youtube.com/@nikhilminecraftmalayalam" target="_blank" rel="noopener noreferrer">
-          Watch on YouTube
+          Visit YouTube Channel
         </a>
       </div>
     </section>
-  </main>
 
-  <footer>
-    nikhil b nair &bull; @nikhilminecraftmalayalam
-  </footer>
+    <section class="box" id="system-requirements">
+      <h2>System Requirements</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Minimum Specs</h3>
+          <p>4-core CPU (Intel Core i3 class or equivalent), 8 GB RAM, integrated or entry-level graphics, 64-bit OS, and stable internet.</p>
+        </div>
+        <div class="card">
+          <h3>Recommended for Smooth Play &amp; Recording</h3>
+          <p>Multi-core CPU, 8 GB–16 GB RAM, dedicated GPU or tuned graphics settings, performance mods, and enough free storage for recordings.</p>
+        </div>
+        <div class="card">
+          <h3>Editing &amp; Workflow Notes</h3>
+          <p>Close heavy background apps while recording or rendering, keep graphics drivers updated, and test performance settings per game or modpack.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="box" id="channel">
+      <h2>Content &amp; Updates</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Minecraft &amp; Mods</h3>
+          <p>Story maps, adventure worlds, horror mods, and Malayalam commentary.</p>
+        </div>
+        <div class="card">
+          <h3>Creator Hub</h3>
+          <p>Official hub for channel links, updates, and project details under <strong>nikhil b nair</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      nikhil b nair &bull; @nikhilminecraftmalayalam
+    </footer>
+  </div>
 </body>
 </html>
